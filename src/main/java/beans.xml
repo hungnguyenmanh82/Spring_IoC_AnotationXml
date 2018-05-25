@@ -19,10 +19,11 @@
 
 	<!-- App2: @autowire -->
 	<!-- Các Beans vẫn phải khai báo để Spring dùng java Reflection search ClassLoad -->
-	<!-- tuy nhiên các properties thì ko cần khai báo -->
+	<!-- tuy nhiên các properties thì ko cần khai báo vì đã dùng @autowire -->
 	<bean id="ParentBeanAutoWire" class="hung.com.autowire.ParentBeanAutoWire">
 		<property name="name" value="ko co viec gi kho"/>
 	</bean>
+	<!-- nếu ko muốn khai báo bean ở XML thì dùng @bean cho class này ở java code -->
 	<bean id="ChildBeanAutoWire" class="hung.com.autowire.ChildBeanAutoWire"></bean>
 
 </beans>
